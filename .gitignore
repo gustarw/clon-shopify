@@ -30,8 +30,32 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env files — never commit real credentials
 .env*
+!.env.example
+
+# local databases and runtime state
+/data/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+
+# merchant/user uploads
+/public/uploads/
+
+# local Codex/plugin state
+/.agents/
+/.codex/
+/.superpowers/
+/skills-lock.json
+
+# local Supabase CLI connection/cache state
+/supabase/.temp/
+
+# proprietary Shopify theme used only as a local acceptance fixture
+/sabino_v5_nichado-1/
+/sabino_v5_nichado-1.zip
 
 # vercel
 .vercel
